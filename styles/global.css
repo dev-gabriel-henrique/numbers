@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+}
+
+:root {
+  --content-primary: #ffffff;
+  --content-secondary: #c7c9cc;
+  --content-tertiary: #d9d9d9;
+  --content-brand: #c58de7;
+  --color-inverse: #030203;
+  --background-primary: #020202;
+  --background-secondary: #111012;
+  --background-tertiary: #24222e;
+  --background-brand: #c58de7;
+  --background-gray: #3d3d3d;
+  --gradient-color: #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%;
+  --gradient-background: #D586E0 0%, #91A1FA 98.93%;
+  --gradient-content: #C7C9CC 0%, #3D3D3D 100%;
+
+  --sora: "Sora", sans-serif;
+  --roboto-m: "Roboto Mono", sans-serif;
+  --roboto-f: "Roboto Flex", sans-serif;
+
+  --display-lg: 800 4.5rem/1.3 var(--sora);
+  --display-md: 800 2.5rem/1.3 var(--sora);
+  --display-sm: 700 2rem/1.3 var(--sora);
+  --overline: 700 1rem/1.5 var(--roboto-m);
+  --p-lg: 500 1rem/1.5 var(--roboto-f);
+  --p-md: 500 .875rem/1.5 var(--roboto-f);
+  --p-sm: 500 .75rem/1.5 var(--roboto-f);
+  --label-lg: 700 1.25rem/1.5 var(--roboto-f);
+  --label-md: 800 1.25rem/1.5 var(--roboto-f);
+  --label-sm: 800 1rem/1.5 var(--roboto-f);
+}
+
+#app {
+  max-width: 25rem;
+  padding: 2rem;
+}
+
+body {
+  background-color: var(--background-primary);
+}
+
+@media (width >= 64em) {
+  #app {
+    max-width: 80rem;
+
+    padding: 5rem 8.375rem;
+
+    display: grid;
+    column-gap: 6.75rem;
+    row-gap: 2rem;
+    grid-template-areas: 
+    "header main main "
+    "header main main"
+    "aside main main";
+
+    align-items: center;
+  }
+
+  & header {
+    grid-area: header;
+  }
+
+  & main {
+    grid-area: main;
+  }
+
+  & aside {
+    grid-area: aside;
+  }
+} 

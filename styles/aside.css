@@ -1,0 +1,29 @@
+aside {
+  margin-top: 5rem;
+  gap: 2rem;
+
+  & .how-works {
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: flex-start;
+
+    & .grid {
+      & h3 {
+        font: var(--p-md);
+        color: var(--background-brand);
+      }
+
+      & p {
+        font: var(--p-sm);
+        color: var(--content-secondary);
+      }
+    }
+  }
+}
+
+@media (width >= 64em) {
+  aside {
+    margin-top: 0;
+    max-width: 24rem;
+  }
+}

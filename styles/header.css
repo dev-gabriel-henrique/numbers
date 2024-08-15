@@ -1,0 +1,54 @@
+header {
+  margin-bottom: 2.625rem;
+  & .logo {
+    gap: .875rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+
+    & h1 {
+      font: 800 1.5rem/1.3 var(--sora);
+      color: var(--content-primary);
+      letter-spacing: -0.06rem;
+    }
+  }
+
+  & .title {
+    justify-content: center;
+    gap: .5rem;
+
+    & h1 {
+      font: var(--display-md);
+      color: var(--content-primary);
+      text-transform: uppercase;
+    }
+
+    & p {
+      font: var(--overline);
+      text-transform: uppercase;
+      background: linear-gradient(90deg, var(--gradient-content));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@media (width >= 64em) {
+  header {
+    justify-content: flex-start;
+    margin-bottom: 0;
+    & .logo {
+      justify-content: initial;
+      max-width: 31.75rem;
+
+    }
+    & .title {
+      gap: 1.25rem;
+      
+    & h1 {
+      font: var(--display-lg);
+      letter-spacing: -0.06em;
+    }
+  }
+  }
+}

@@ -1,0 +1,32 @@
+main {
+  & .sort {
+    gap: 2px;
+    margin-bottom: 2.5rem;
+
+    & h2 {
+      font: var(--label-lg);
+      color: var(--content-primary);
+      text-transform: uppercase;
+    }
+
+    & p {
+      font: var(--p-md);
+      color: var(--content-tertiary);
+    }
+  }
+
+  & form {
+    display: grid;
+  }
+} 
+
+@media (width >= 64em) {
+  main {
+    & .sort {
+      & p {
+        font: var(--p-md);
+        color: var(--content-secondary);
+      }
+    }
+  }
+}
