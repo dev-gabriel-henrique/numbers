@@ -8,10 +8,8 @@
     <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
     <title>Numbers</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/index.css" />
   </head>
   <body>
@@ -39,30 +37,33 @@
 
         <form class="grid">
           <fieldset class="flex">
-            <div class="input-wrapper">
+            <div class="input-wrapper grid">
               <label for="number">Números</label>
               <input type="text" name="sort-number" id="sort-number" />
             </div>
 
-            <div class="input-wrapper">
-              <label for="number">Números</label>
+            <div class="input-wrapper grid">
+              <label for="number">De</label>
               <input type="text" name="of-number" id="of-number" />
             </div>
 
-            <div class="input-wrapper">
+            <div class="input-wrapper grid">
               <label for="number">De</label>
               <input type="text" name="to-number" id="to-number" />
             </div>
           </fieldset>
-          
-          <fieldset>       
+
+          <fieldset class="toggle">       
           <div class="select-wrapper">
-            <input type="checkbox" name="repeat" id="repeat" />
+            <label class="switch">
+              <input type="checkbox" name="repeat" id="repeat" />
+              <span title="slider"></span>
+            </label>
             <label for="repeat">Não repetir números</label>
           </div>
           </fieldset>
 
-          <button id="sort">
+          <button id="sort" class="flex">
             Sortear
             <svg
               width="24"
