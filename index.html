@@ -39,17 +39,17 @@
           <fieldset class="flex">
             <div class="input-wrapper grid">
               <label for="number">Números</label>
-              <input type="text" name="sort-number" id="sort-number" />
+              <input class="numbers" type="number" name="sort-number" id="drawnNumbers" value="1" min="1" max="5"/>
             </div>
 
             <div class="input-wrapper grid">
               <label for="number">De</label>
-              <input type="text" name="of-number" id="of-number" />
+              <input class="numbers" type="number" name="of-number" id="fromNumber" value="1" min="1"/>
             </div>
 
             <div class="input-wrapper grid">
-              <label for="number">De</label>
-              <input type="text" name="to-number" id="to-number" />
+              <label for="number">Á</label>
+              <input class="numbers" type="number" name="to-number" id="toNumber" value="10" min="2"  />
             </div>
           </fieldset>
 
@@ -59,11 +59,11 @@
               <input type="checkbox" name="repeat" id="repeat" />
               <span title="slider"></span>
             </label>
-            <label for="repeat">Não repetir números</label>
+            <label for="repeat" id="label-repeat">Não repetir números</label>
           </div>
           </fieldset>
 
-          <button id="sort" class="flex">
+          <button id="drawn" class="flex">
             Sortear
             <svg
               width="24"
@@ -121,5 +121,7 @@
         </div>
       </aside>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

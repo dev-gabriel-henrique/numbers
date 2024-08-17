@@ -38,7 +38,7 @@ main {
           padding: 0.25rem 0.5rem;
 
           height: 3.5rem;
-          max-width: 5.375rem;
+          max-width: 6rem;
 
           font: var(--display-sm);
           color: var(--content-primary);
@@ -82,6 +82,7 @@ main {
           right: 0;
           bottom: 0;
           transition: 0.4s;
+          border-radius: 1rem;
         }
 
         & span::before {
@@ -94,7 +95,7 @@ main {
           bottom: 3px;
           background-color: var(--content-primary);
           transition: 0.4s;
-          border-radius: 50%;
+          border-radius: 1rem;
         }
 
         & input:checked + span {
@@ -122,6 +123,11 @@ main {
   & button {
     background-color: var(--background-tertiary);
     padding: 1rem;
+    
+    position: relative;
+
+    display: flex;
+    align-items: center;
 
     gap: .5rem;
     justify-content: center;
@@ -131,6 +137,54 @@ main {
 
     font: var(--label-md);
     color: var(--content-primary);
+    cursor: pointer;
+
+    & svg {
+      transition: all .5s ease-in-out;
+    }
+
+    &:hover {
+      background-color: var(--background-secondary);
+
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        
+  
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+  
+        background: linear-gradient(var(--gradient-color));
+  
+        border-radius: .5rem;
+        background-size: 300% 300%;
+  
+        transition: animation .5s ease-in-out;
+  
+        animation: bgMove 8s linear alternate infinite;
+  
+        filter: blur(3px);
+      }
+
+      & svg {
+        animation: move .9s ease-in-out infinite;
+      }
+    }
+
+  }
+}
+
+.result {
+  min-width: 5.25rem;
+  max-width: max-content;
+  height: 5.25rem;
+  border-radius: 28px;
+  
+  & p {
+    color: var(--content-brand);
+    font: 700 3rem/1.5 var(--roboto-m);
+    text-align: center;
   }
 }
 
@@ -142,5 +196,21 @@ main {
         color: var(--content-secondary);
       }
     }
+  }
+}
+
+@keyframes move {
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes bgMove {
+  0% {
+    background-size: 0% 0%;
+  }
+
+  100% {
+    background-size: 300% 300%;
   }
 }
