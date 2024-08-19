@@ -59,6 +59,10 @@ drawn.addEventListener("click", () => {
           throw new Error("Quantidade de números não compatível. Favor verifique a quantidade de números sorteados e tente novamente")
         }
 
+        if(toValue > 10000) {
+          throw new Error("Valor máximo de números atingido! Favor verifique e tente novamente!")
+        }
+
         RandomNumbers.add(randomNum);
         ResultRandom.push(randomNum);
       }
